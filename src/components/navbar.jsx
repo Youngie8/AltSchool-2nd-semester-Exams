@@ -10,6 +10,7 @@ const Navbar = () => {
         </h2>
         <div className="navbar-btn">
             <a href='/' className="btn black-white-btn">All Repos</a>
+            <a href='/search' className="btn color-3-white-btn">Search for Repo</a>
             <a href='https://github.com/new' className="btn color-2-black-btn">New Repo</a>
         </div>
     </div>

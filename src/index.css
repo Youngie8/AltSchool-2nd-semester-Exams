@@ -58,6 +58,10 @@ html, body {
   border: .2rem solid #0DAB76;
   color: #000;
 }
+.color-3-white-btn {
+  color: #0B5D1E;
+  border: .2rem solid #0B5D1E;
+}
 
 /* NavBar */
 .navbar {
@@ -125,6 +129,7 @@ html, body {
   color: #053B06;
 }
 /* Link */
-Link {
+.link {
   text-decoration: none;
+  color: unset;
 }

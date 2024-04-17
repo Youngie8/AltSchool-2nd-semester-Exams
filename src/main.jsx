@@ -8,6 +8,7 @@ import "./index.css";
 import ErrPage from "./components/errPage";
 import Repos from "./components/repos";
 import Repo from "./components/repo";
+import Searchbar from "./components/searchbar";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +22,10 @@ const router = createBrowserRouter([
       }
     ],
   },
+  {
+    path: "/search",
+    element: <Searchbar />
+  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

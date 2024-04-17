@@ -11,13 +11,6 @@ const Repos = () => {
         <div className="details">
             <Outlet />
         </div>
-        {/* <div className="repos-search-header">
-            <input 
-            type="search"
-            className='repos-search'
-            placeholder='Search for a repo...'
-            />
-        </div> */}
         <div className="repos-content">
             {error && <div>{ error }</div>}
             {isPending && <div className='loading'>
@@ -25,7 +18,7 @@ const Repos = () => {
                 </div>}
             {repos && repos.map((repo) => (
                 <div key={repo.id} className={"border-" + String(repo.id).charAt(2) % 4 + " repos-repo"}>
-                    <Link to={"/repo/" + repo.name}>
+                    <Link className={"link"} to={"/repo/" + repo.name}>
                         <h3 className={"color-" + String(repo.id).charAt(4)}>{ repo.name }</h3>
                         {repo.description ? repo.description : "No description  for this repo." }
                     </Link>
