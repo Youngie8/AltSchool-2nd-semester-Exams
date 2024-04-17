@@ -19,13 +19,13 @@ const router = createBrowserRouter([
       { 
         path: "repo/:id",
         element: <Repo />
+      },
+      {
+        path: "search",
+        element: <Searchbar />
       }
     ],
   },
-  {
-    path: "/search",
-    element: <Searchbar />
-  }
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(

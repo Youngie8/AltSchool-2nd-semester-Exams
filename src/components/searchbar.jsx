@@ -3,8 +3,7 @@ import Navbar from './navbar'
 
 const Searchbar = () => {
   return (
-    <div className="">
-    <Navbar />
+    <div className=""> 
     <div className="repos-search-header">
         <input 
         type="search"
