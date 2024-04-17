@@ -17,7 +17,7 @@ const router = createBrowserRouter([
     errorElement: <ErrPage />,
     children: [
       { 
-        path: "repo/:id",
+        path: "repos/:repoId",
         element: <Repo />
       },
       {

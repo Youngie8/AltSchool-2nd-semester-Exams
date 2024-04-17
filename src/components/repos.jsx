@@ -7,7 +7,7 @@ const Repos = () => {
     const {data:repos, isPending, error} = useFetch("https://api.github.com/users/Youngie8/repos")
   return (
     <div className='repos'>
-        <Navbar Link={Link} />
+        <Navbar />
         <div className="details">
             <Outlet />
         </div>
