@@ -17,8 +17,8 @@ const Repos = () => {
                     <h3> Loading ...</h3>
                 </div>}
             {repos && repos.map((repo) => (
-                <div key={repo.id} className={"border-" + String(repo.id).charAt(2) % 4 + " repos-repo"}>
-                    <Link className={"link"} to={"/repo/" + repo.name}>
+                <div key={repo.name} className={"border-" + String(repo.id).charAt(2) % 4 + " repos-repo"}>
+                    <Link className={"link"} to={"/repos/" + repo.name}>
                         <h3 className={"color-" + String(repo.id).charAt(4)}>{ repo.name }</h3>
                         {repo.description ? repo.description : "No description  for this repo." }
                     </Link>

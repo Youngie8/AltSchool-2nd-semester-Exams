@@ -14,10 +14,9 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Repos />,
-    errorElement: <ErrPage />,
     children: [
       { 
-        path: "repos/:repoId",
+        path: "repos/:name",
         element: <Repo />
       },
       {
