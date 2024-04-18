@@ -3,9 +3,9 @@ import React from 'react'
 const Searchbar = ({ repos }) => {
   const handleSubmit = (e) => e.preventDefault();
 
-  // const handleSearchChange = (e) => {
-  //   const results = repos.filter(repo => repo.name.includes(e.target.value))
-  // }
+  const handleSearchChange = (e) => {
+    const results = repos.filter(repo => repo.name.includes(e.target.value))
+  }
 
   return (
     <div className=""> 
@@ -14,7 +14,7 @@ const Searchbar = ({ repos }) => {
         type="search"
         className='repos-search'
         placeholder='Search for a repo...'
-        // onChange={handleSearchChange}
+        onChange={handleSearchChange}
         />
         <button className='btn color-2-black-btn'>search</button>
     </form>

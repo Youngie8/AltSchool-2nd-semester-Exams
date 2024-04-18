@@ -9,7 +9,7 @@ const Repos = () => {
   return (
     <div className='repos'>
         <Navbar />
-        {/* <Searchbar repos={repos} /> */}
+        <Searchbar repos={repos} />
         <div className="details">
             <Outlet />
         </div>
