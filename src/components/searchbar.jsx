@@ -1,16 +1,23 @@
 import React from 'react'
-import Navbar from './navbar'
 
-const Searchbar = () => {
+const Searchbar = ({ repos }) => {
+  const handleSubmit = (e) => e.preventDefault();
+
+  // const handleSearchChange = (e) => {
+  //   const results = repos.filter(repo => repo.name.includes(e.target.value))
+  // }
+
   return (
     <div className=""> 
-    <div className="repos-search-header">
+    <form onSubmit={handleSubmit} className="repos-search-header">
         <input 
         type="search"
         className='repos-search'
         placeholder='Search for a repo...'
+        // onChange={handleSearchChange}
         />
-    </div>
+        <button className='btn color-2-black-btn'>search</button>
+    </form>
     </div>
   )
 }

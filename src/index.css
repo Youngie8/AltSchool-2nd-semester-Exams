@@ -40,10 +40,20 @@ html, body {
 .border-4 {
   border: 2px solid #053B06;
 }
+/* text-weight */
+.bold {
+  font-weight: 700;
+}
+.bolder {
+  font-weight: 900;
+}
+.light {
+  font-weight: 300;
+}
 
 /* Buttons */
 .btn {
-  padding: .9rem 1.5rem;
+  padding: .5rem 1.1rem;
   outline: none;
   font-weight: 600;
   text-decoration: none;
@@ -89,24 +99,45 @@ html, body {
   width: 75%;
   margin: 1rem auto;
   padding: 0.5rem 0.3rem;
-  border-radius: 0.5rem;
 }
+/* SearhBar */
 .repos-search-header {
   display: flex;
+  width: 75%;
   justify-content: center;
   align-items: center;
-  width: 100%;
+  margin: 2rem auto;
+  border: .2rem solid #0B5D1E;
 }
 .repos-search {
   height: 3.5rem;
-  width: 76%;
-  margin-top: 2rem;
+  width: 85%;
   padding: 0.5rem 0.3rem;
-  border: 2px solid #0B5D1E;
-  border-radius: .52rem;
   font-family: "Nunito Sans", sans-serif;
+  border: none;
+}
+.repos-search-header .btn {
+  height: 3.5rem;
+  width: 15%;
+  color: #fff;
+  background-color: #0B5D1E;
+  letter-spacing: .1rem;
+  font-family: "Nunito Sans", sans-serif;
+  border: none;
 }
 
+/* Repo */
+.repo {
+  padding: .5rem;
+  text-align: center;
+  height: 60vh;
+  width: 80vw;
+  margin: 4rem auto;
+  border: .25rem solid #053B06;
+}
+.repo p {
+  margin: 1.5rem 0;
+}
 /* ErrPage */
 .err-page {
   padding: 8rem 0;
@@ -132,4 +163,10 @@ html, body {
 .link {
   text-decoration: none;
   color: unset;
+}
+/* Loading */
+.loading {
+  text-align: center;
+  font-size: 1.5rem;
+  color: color-mix(in srgb, #053B06 30%, #139A43 60%);
 }

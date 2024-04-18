@@ -1,6 +1,7 @@
 import React from 'react'
-import { useParams } from 'react-router-dom'
+import { useParams, Link } from 'react-router-dom'
 import useFetch from './useFetch'
+import ScrollToTop from './scrollToTop'
 
 const Repo = () => {
   const {name} = useParams();
@@ -10,11 +11,16 @@ const Repo = () => {
       {error && <div> { error } </div>}
       {isPending && <div className='loading'> Loading... </div>}
       {repo && (
-        <div>
+        <div className={"repo"}>
           <h2>{repo.name}</h2>
+          <p>
+          <span className="color-2 bold">Language:</span> {repo.language}, 
+          <span className="color-3 bold"> Visibility:</span> {repo.visibility}</p>
           <p>{ repo.description ? repo.description : "No description yet"}</p>
+          <Link to={repo.html_url} className='black-white-btn link btn' >GitHub link to {repo.name}</Link>
         </div>
       )}
+      <ScrollToTop />
     </div>
   )
 }

@@ -14,14 +14,11 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Repos />,
+    errorElement: <ErrPage />,
     children: [
       { 
         path: "repos/:name",
         element: <Repo />
-      },
-      {
-        path: "search",
-        element: <Searchbar />
       }
     ],
   },
