@@ -8,7 +8,6 @@ import "./index.css";
 import ErrPage from "./components/errPage";
 import Repos from "./components/repos";
 import Repo from "./components/repo";
-import Searchbar from "./components/searchbar";
 
 const router = createBrowserRouter([
   {

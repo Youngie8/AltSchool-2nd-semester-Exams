@@ -2,12 +2,10 @@ import React from 'react'
 import useFetch from './useFetch'
 import Navbar from './navbar'
 import { Outlet, Link } from 'react-router-dom'
-import Searchbar from './searchbar'
 import { useState } from 'react'
 
 const Repos = () => {
     const {data:repos, isPending, error} = useFetch("https://api.github.com/users/Youngie8/repos");
-    const handleSubmit = (e) => e.preventDefault();
     const [inputValue, setInputValue] = useState('')
   return (
     <div className='repos'>
@@ -15,7 +13,7 @@ const Repos = () => {
         <div className="details">
             <Outlet />
         </div>
-        <form onSubmit={handleSubmit} className="repos-search-header">
+        <form className="repos-search-header">
             <input 
             type="text"
             className='repos-search'
