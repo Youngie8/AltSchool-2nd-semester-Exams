@@ -24,7 +24,7 @@ const Repos = () => {
             />
     </form> 
         <div className="repos-content">
-            {error && <div>{ error }</div>}
+            {error && <ErrBoundary error={ error }/>}
             {isPending && <div className='loading'>
                     <h3> Loading...</h3>
                 </div>}

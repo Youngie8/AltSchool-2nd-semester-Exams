@@ -153,6 +153,12 @@ input:focus {
   line-height: 0;
   color: #053B06;
 }
+/* errBoundary */
+.errBoundary {
+  text-align: center;
+  color: #0B5D1E;
+  font-size: 1.4rem;
+}
 /* Link */
 .link {
   text-decoration: none;
