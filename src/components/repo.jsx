@@ -18,7 +18,7 @@ const Repo = () => {
           <span className="color-2 bold">Language:</span> {repo.language}, 
           <span className="color-3 bold"> Visibility:</span> {repo.visibility}</p>
           <p>{ repo.description ? repo.description : "No description yet"}</p>
-          <Link to={repo.html_url} className='black-white-btn link btn' >GitHub link to {repo.name}</Link>
+          <Link to={repo.html_url} className='black-white-btn link btn' >GitHub link to <span className="bold color-3 d-m-none">{ repo.name }</span></Link>
         </div>
       )}
       <ScrollToTop />
