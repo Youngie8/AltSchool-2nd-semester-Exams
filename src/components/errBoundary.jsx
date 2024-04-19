@@ -1,9 +1,9 @@
 import React from 'react'
 
-const ErrBoundary = ({ error }) => {
+const ErrBoundary = ({error}) => {
   return (
     <div className='errBoundary'>
-        {error}
+      Oops! An Error Occured: {error}
     </div>
   )
 }

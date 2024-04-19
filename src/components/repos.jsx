@@ -3,6 +3,7 @@ import useFetch from './useFetch'
 import Navbar from './navbar'
 import { Outlet, Link } from 'react-router-dom'
 import { useState } from 'react'
+import ErrBoundary from './errBoundary'
 
 const Repos = () => {
     const {data:repos, isPending, error} = useFetch("https://api.github.com/users/Youngie8/repos");
