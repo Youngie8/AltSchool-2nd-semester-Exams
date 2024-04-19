@@ -3,10 +3,12 @@ import useFetch from './useFetch'
 import Navbar from './navbar'
 import { Outlet, Link } from 'react-router-dom'
 import Searchbar from './searchbar'
+import { useState } from 'react'
 
 const Repos = () => {
     const {data:repos, isPending, error} = useFetch("https://api.github.com/users/Youngie8/repos");
     const handleSubmit = (e) => e.preventDefault();
+    const [inputValue, setInputValue] = useState('')
   return (
     <div className='repos'>
         <Navbar />
@@ -15,11 +17,13 @@ const Repos = () => {
         </div>
         <form onSubmit={handleSubmit} className="repos-search-header">
             <input 
-            type="search"
+            type="text"
             className='repos-search'
+            id='search'
             placeholder='Search for a repo...'
+            value={inputValue}
+            onChange={(e) => setInputValue(e.target.value)}
             />
-        <button className='btn color-2-black-btn'>search</button>
     </form> 
         <div className="repos-content">
             {error && <div>{ error }</div>}
@@ -27,11 +31,17 @@ const Repos = () => {
                     <h3> Loading...</h3>
                 </div>}
             {repos && repos.map((repo) => (
-                <div key={repo.name} className={"border-" + String(repo.id).charAt(2) % 4 + " repos-repo"}>
-                    <Link className={"link"} to={"/repos/" + repo.name}>
-                        <h3 className={"color-" + String(repo.id).charAt(4)}>{ repo.name }</h3>
-                        {repo.description ? repo.description : "No description  for this repo." }
-                    </Link>
+                <div key={repo.name} >
+                    {
+                        repo.name.toLowerCase().includes(inputValue.toLowerCase()) ? 
+                    <div className={"border-" + String(repo.id).charAt(2) % 4 + " repos-repo"}>
+                        <Link className={"link"} to={"/repos/" + repo.name}>
+                             <h3 className={"color-" + String(repo.id).charAt(4)}>{ repo.name }</h3>
+                            <p>{repo.description ? repo.description : "No description  for this repo." }</p>
+                         </Link>
+                    </div>
+                          : ""
+                    }
                 </div>
             ))}
         </div>

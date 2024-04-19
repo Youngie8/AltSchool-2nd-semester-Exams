@@ -111,19 +111,13 @@ html, body {
 }
 .repos-search {
   height: 3.5rem;
-  width: 85%;
+  width: 100%;
   padding: 0.5rem 0.3rem;
   font-family: "Nunito Sans", sans-serif;
   border: none;
 }
-.repos-search-header .btn {
-  height: 3.5rem;
-  width: 15%;
-  color: #fff;
-  background-color: #0B5D1E;
-  letter-spacing: .1rem;
-  font-family: "Nunito Sans", sans-serif;
-  border: none;
+input:focus {
+  outline: none;
 }
 
 /* Repo */
