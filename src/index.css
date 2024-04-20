@@ -100,6 +100,10 @@ html, body {
   margin: 1rem auto;
   padding: 0.5rem 0.3rem;
   border-radius: .3rem;
+  transition-duration: 300ms;
+}
+.repos-repo:focus, .repos-repo:hover {
+  width: 80%;
 }
 /* SearhBar */
 .repos-search-header {
