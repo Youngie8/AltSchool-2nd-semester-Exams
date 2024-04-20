@@ -1,29 +1,20 @@
 import React from 'react'
-import useFetch from './useFetch'
 import Navbar from './navbar'
 import { Outlet, Link } from 'react-router-dom'
 import { useState } from 'react'
 import ErrBoundary from './errBoundary'
+import SearchBar from './searchBar'
 
-const Repos = () => {
-    const {data:repos, isPending, error} = useFetch("https://api.github.com/users/Youngie8/repos");
-    const [inputValue, setInputValue] = useState('')
+const Repos = ({repos, isPending, error}) => {
+    const [inputValue, setInputValue] = useState('');
+    
   return (
     <div className='repos'>
         <Navbar />
         <div className="details">
             <Outlet />
         </div>
-        <form className="repos-search-header">
-            <input 
-            type="text"
-            className='repos-search'
-            id='search'
-            placeholder='Search for a repo...'
-            value={inputValue}
-            onChange={(e) => setInputValue(e.target.value)}
-            />
-    </form> 
+        <SearchBar inputValue={inputValue} setInputValue={setInputValue} />
         <div className="repos-content">
             {error && <ErrBoundary error={ error }/>}
             {isPending && <div className='loading'>
