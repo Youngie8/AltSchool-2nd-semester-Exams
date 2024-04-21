@@ -7,6 +7,7 @@ html, body {
   margin: 0%;
   padding: 0%;
   background-color: #fff;
+  height: 100vh;
 }
 /* Color*/
 .color-0{
@@ -176,4 +177,18 @@ input:focus {
   text-align: center;
   font-size: 1.5rem;
   color: color-mix(in srgb, #053B06 30%, #139A43 60%);
+}
+
+/* Phone and Tablet */
+@media only screen and (max-width: 670px) {
+  .navbar {
+    display: flex;
+    flex-direction: column;
+    padding-top: .5rem;
+    justify-content: center;
+    gap: 0;
+  }
+  .d-m-none {
+    display: none;
+  }
 }

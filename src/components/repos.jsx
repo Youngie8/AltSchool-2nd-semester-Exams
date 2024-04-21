@@ -2,8 +2,8 @@ import React from 'react'
 import Navbar from './navbar'
 import { Outlet, Link } from 'react-router-dom'
 import { useState } from 'react'
-import ErrBoundary from './errBoundary'
 import SearchBar from './searchBar'
+import ErrPage from './errPage'
 
 const Repos = ({repos, isPending, error}) => {
     const [inputValue, setInputValue] = useState('');
@@ -16,7 +16,7 @@ const Repos = ({repos, isPending, error}) => {
         </div>
         <SearchBar inputValue={inputValue} setInputValue={setInputValue} />
         <div className="repos-content">
-            {error && <ErrBoundary error={ error }/>}
+            {error && <ErrPage />}
             {isPending && <div className='loading'>
                     <h3> Loading...</h3>
                 </div>}
